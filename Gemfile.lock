@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/superacidjax/pry.git
+  revision: 80599ccdf9d19b653533220fc11715df061e6981
+  specs:
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -137,9 +145,6 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.7)
-    pry (0.14.2)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     pry-rails (0.3.11)
       pry (>= 0.13.0)
     psych (5.1.2)
@@ -248,6 +253,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   pg (~> 1.1)
+  pry!
   pry-rails
   puma (>= 5.0)
   rails (~> 7.2.1)

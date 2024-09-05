@@ -17,6 +17,7 @@ gem "uuid7"
 gem "bootsnap", require: false
 
 group :development, :test do
+  gem "pry", git: "https://github.com/superacidjax/pry.git"
   gem "pry-rails"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
