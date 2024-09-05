@@ -6,6 +6,8 @@ gem "rails", "~> 7.2.1"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "uuid7"
+gem "karafka"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 # gem "redis", ">= 4.0.1"
