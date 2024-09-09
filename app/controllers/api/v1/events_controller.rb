@@ -5,6 +5,8 @@ class Api::V1::EventsController < ApplicationController
   def create
     event_data = event_params.to_h
     event_data[:application_id] = @api_key.application_id
+    # TODO Background this
+    SendToWarehouse.call(event_data)
     render json: event_data, status: :created
   end
 

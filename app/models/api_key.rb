@@ -9,6 +9,6 @@ class ApiKey < ApplicationRecord
   private
 
   def generate_api_secret
-    self.api_secret = SecureRandom.base58(30)
+    self.api_secret = "andorra_#{SecureRandom.base58(30)}"
   end
 end
