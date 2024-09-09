@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.3.5"
 
 gem "rails", "~> 7.2.1"
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.5"
 gem "puma", ">= 5.0"
 gem "uuid7"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
