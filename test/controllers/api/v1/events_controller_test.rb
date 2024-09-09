@@ -3,6 +3,7 @@ require "test_helper"
 class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @api_key = api_keys(:one)
+    SendToWarehouse.stubs(:call)
   end
 
   test "should create event with valid API secret" do
@@ -29,8 +30,24 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
   test "should return unauthorized for invalid API secret" do
     post api_v1_events_url,
       params: { event: { event_type: "example_event", user_id: "12345", data: { key: "value" } } },
-      headers: { Authorization: "Basic #{Base64.encode64("invalid_secret:")}" }
+      headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
 
     assert_response :unauthorized
+  end
+
+  test "should return bad request if event_type is missing" do
+    post api_v1_events_url,
+      params: { event: { user_id: "12345", data: { key: "value" } } },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+  end
+
+  test "should return bad request if user_id is missing" do
+    post api_v1_events_url,
+      params: { event: { event_type: "example_event", data: { key: "value" } } },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
   end
 end
