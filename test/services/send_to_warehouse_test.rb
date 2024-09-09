@@ -3,7 +3,7 @@ require "test_helper"
 class SendToWarehouseTest < ActiveSupport::TestCase
   setup do
     # Stub the Rudder::Analytics initialization and methods using Mocha
-    @mock_analytics = mock('analytics')
+    @mock_analytics = mock("analytics")
     Rudder::Analytics.stubs(:new).returns(@mock_analytics)
   end
 
