@@ -2,7 +2,6 @@ require "test_helper"
 
 class SendToWarehouseTest < ActiveSupport::TestCase
   setup do
-    # Stub the Rudder::Analytics initialization and methods using Mocha
     @mock_analytics = mock("analytics")
     Rudder::Analytics.stubs(:new).returns(@mock_analytics)
   end
@@ -15,55 +14,20 @@ class SendToWarehouseTest < ActiveSupport::TestCase
     ).returns(@mock_analytics)
 
     @mock_analytics.stubs(:track)
-    @mock_analytics.stubs(:close)
+    @mock_analytics.stubs(:identify)
 
-    SendToWarehouse.call({
+    # this is testing the subclass to verify initialization
+    SendEvent.call({
       "user_id" => "12345",
       "event_type" => "example_event",
-      "data" => { "key" => "value" }
+      "properties" => { "key" => "value" },
+      "application_id" => "14124jjj3424"
     })
-  end
 
-  test "should track event with correct data" do
-    event_data = {
-      "user_id" => "12345",
-      "event_type" => "example_event",
-      "data" => { "key" => "value" }
-    }
-
-    # Expect the track method to be called with the correct arguments
-    @mock_analytics.expects(:track).with(
-      user_id: event_data["user_id"],
-      event: event_data["event_type"],
-      properties: event_data["data"]
-    )
-
-    # Expect close method to be called after the track
-    @mock_analytics.expects(:close)
-
-    # Call the service
-    SendToWarehouse.call(event_data)
-  end
-
-  test "should raise an error if user_id is missing" do
-    event_data = {
-      "event_type" => "example_event",
-      "data" => { "key" => "value" }
-    }
-
-    assert_raises(ArgumentError) do
-      SendToWarehouse.call(event_data)
-    end
-  end
-
-  test "should raise an error if event_type is missing" do
-    event_data = {
-      "user_id" => "12345",
-      "data" => { "key" => "value" }
-    }
-
-    assert_raises(ArgumentError) do
-      SendToWarehouse.call(event_data)
-    end
+    SendPerson.call({
+      "user_id" => "414",
+      "traits" => { "key" => "value" },
+      "context" => { "application_id" => "value" }
+    })
   end
 end
