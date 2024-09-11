@@ -1,5 +1,4 @@
 class Api::V1::PeopleController < ApplicationController
-
   # POST /api/v1/people
   def create
     person_data = person_params.to_h

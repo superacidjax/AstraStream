@@ -1,5 +1,4 @@
 class Api::V1::EventsController < ApplicationController
-
   # POST /api/v1/events
   def create
     event_data = event_params.to_h

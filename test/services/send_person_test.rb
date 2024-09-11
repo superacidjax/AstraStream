@@ -65,6 +65,5 @@ class SendPersonTest < ActiveSupport::TestCase
     assert_raises(ArgumentError) do
       SendPerson.call(person_data)
     end
-
   end
 end

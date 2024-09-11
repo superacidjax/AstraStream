@@ -7,7 +7,7 @@ class SendPerson < SendToWarehouse
   private
 
   def self.identify_person(data, analytics)
-    self.error_for_missing(["user_id", "context", "traits"], data)
+    self.error_for_missing([ "user_id", "context", "traits" ], data)
 
     # https://www.rudderstack.com/docs/sources/event-streams/sdks/rudderstack-ruby-sdk/#identify
     analytics.identify(
