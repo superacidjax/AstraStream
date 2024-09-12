@@ -8,7 +8,15 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create event with valid API secret" do
     post api_v1_events_url,
-      params: { event: { event_type: "example_event", user_id: "12345", data: { key: "value" } } },
+      params: {
+        event: {
+          event_type: "new_user_created",
+          user_id: "12345",
+          properties: {
+            key: "value"
+          }
+        }
+      },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
     assert_response :created
@@ -29,7 +37,7 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should return unauthorized for invalid API secret" do
     post api_v1_events_url,
-      params: { event: { event_type: "example_event", user_id: "12345", data: { key: "value" } } },
+      params: { event: { event_type: "example_event", user_id: "12345", properties: { key: "value" } } },
       headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
 
     assert_response :unauthorized
@@ -37,7 +45,7 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should return bad request if event_type is missing" do
     post api_v1_events_url,
-      params: { event: { user_id: "12345", data: { key: "value" } } },
+      params: { event: { user_id: "12345", properties: { key: "value" } } },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
     assert_response :bad_request
@@ -45,7 +53,7 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should return bad request if user_id is missing" do
     post api_v1_events_url,
-      params: { event: { event_type: "example_event", data: { key: "value" } } },
+      params: { event: { event_type: "example_event", properties: { key: "value" } } },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
     assert_response :bad_request

@@ -1,12 +1,4 @@
-module SendToWarehouse
-  def self.call(data)
-    analytics = self.initialize_rudder
-    self.analytics_track(data, analytics)
-    analytics.close
-  end
-
-  private
-
+class SendToWarehouse
   def self.analytics
     @analytics ||= initialize_rudder
   end
@@ -27,15 +19,9 @@ module SendToWarehouse
     )
   end
 
-  def self.analytics_track(data, analytics)
-    # https://www.rudderstack.com/docs/sources/event-streams/sdks/rudderstack-ruby-sdk/#track
-    raise ArgumentError, "user_id is missing" if data["user_id"].blank?
-    raise ArgumentError, "event_type is missing" if data["event_type"].blank?
-
-    analytics.track(
-      user_id: data["user_id"],
-      event: data["event_type"],
-      properties: data["data"]
-    )
+  def self.error_for_missing(required_parameters_array, data)
+    required_parameters_array.each do |rp|
+      raise ArgumentError, "#{rp} is missing" if data[rp].blank?
+    end
   end
 end
