@@ -1,35 +1,95 @@
 class Api::V1::EventsController < ApplicationController
   # POST /api/v1/events
   def create
-    event_data = event_params.to_h
-    if missing_required_params.present?
-      render_error(missing_required_params)
+    if single_event?
+      handle_single_event
+    elsif batch_event?
+      handle_batch_event
     else
-      event_data[:properties][:application_id] = @api_key.application_id
-      SendEvent.call(event_data)
-      render json: event_data, status: :created
+      render_error([ "No valid event or events array provided" ])
     end
   end
 
+  private
+
+  def single_event?
+    params[:event].present?
+  end
+
+  def batch_event?
+    params[:events].present? && params[:events].is_a?(Array)
+  end
+
+  def handle_single_event
+    event_data = prepare_single_event
+    errors = process_or_render_error([ event_data ])
+
+    if errors.empty?
+      render json: event_data, status: :created
+    else
+      render_error(errors.map { |e| e[:missing_params] })
+    end
+  end
+
+  def handle_batch_event
+    events = params[:events].map { |event_data| prepare_batch_event(event_data) }
+    errors = process_or_render_error(events)
+
+    if errors.present?
+      render json: { error: "Some events have missing parameters", details: errors }, status: :bad_request
+    else
+      render json: { message: "All events created successfully" }, status: :created
+    end
+  end
+
+  def prepare_single_event
+    event_data = event_params.to_h
+    event_data[:context] = generate_context
+    event_data
+  end
+
+  def prepare_batch_event(event_data)
+    permitted_event = permit_event(event_data)
+    permitted_event[:context] = generate_context
+    permitted_event
+  end
+
+  def process_or_render_error(events)
+    errors = []
+    events.each_with_index do |event_data, index|
+      missing_params = find_missing_required_params(event_data)
+      if missing_params.present?
+        errors << { index: index, missing_params: missing_params }
+      end
+    end
+
+    if errors.empty?
+      SendEvent.call(events)
+    end
+
+    errors
+  end
+
   def event_params
-    params.require(:event).permit(
-      :event_type,
-      :user_id,
-      :timestamp,
-      properties: {},
-      context: {}
-    )
+    params.require(:event).permit(:event_type, :user_id, :timestamp, properties: {})
+  end
+
+  def permit_event(event_data)
+    event_data.permit(:event_type, :user_id, :timestamp, properties: {}).to_h
+  end
+
+  def find_missing_required_params(event_data)
+    required_params = [ :event_type, :user_id, :properties, :timestamp ]
+    required_params.select { |param| event_data[param].blank? }
   end
 
   def render_error(missing_params)
-    render json: {
-      error: "Missing required parameters: #{missing_params.join(', ')}"
-    },
-    status: :bad_request
+    render json: { error: "Missing required parameters: #{missing_params.join(', ')}" }, status: :bad_request
   end
 
-  def missing_required_params
-    required_params = [ :event_type, :user_id, :properties, :timestamp, :context ]
-    required_params.select { |param| event_params[param].blank? }
+  def generate_context
+    raise ArgumentError, "API key not set" if @api_key.blank?
+
+    { application_id: @api_key.application_id, generated_at: Time.current }
   end
 end

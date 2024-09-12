@@ -4,28 +4,109 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @api_key = api_keys(:one)
     SendEvent.stubs(:call)
+    @valid_event = {
+      event_type: "new_user_created",
+      user_id: "12345",
+      properties: {
+        key: "value"
+      },
+      timestamp: "2010-10-25T23:48:46+00:00"
+    }
   end
 
-  test "should create event with valid API secret" do
+  test "should create single event with valid API secret and generate context" do
     post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "new_user_created",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
+      params: { event: @valid_event },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
-      assert_response :created
-      response_data = JSON.parse(response.body)
-      assert_equal @api_key.application_id, response_data["properties"]["application_id"]
+    assert_response :created
+    response_data = JSON.parse(response.body)
+    assert_equal @api_key.application_id, response_data["context"]["application_id"]
+  end
+
+  test "should create multiple events with valid API secret and generate context" do
+    post api_v1_events_url,
+      params: { events: [ @valid_event, @valid_event ] },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :created
+    response_data = JSON.parse(response.body)
+    assert_equal "All events created successfully", response_data["message"]
+  end
+
+  test "should return bad request if event_type is missing in single event" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:event_type)
+
+    post api_v1_events_url,
+      params: { event: invalid_event },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    assert_includes @response.body, "Missing required parameters: event_type"
+  end
+
+  test "should return bad request if event_type is missing in multiple events" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:event_type)
+
+    post api_v1_events_url,
+      params: { events: [ @valid_event, invalid_event ] },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "event_type" ]
+  end
+
+  test "should return bad request if timestamp is missing in single event" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:timestamp)
+
+    post api_v1_events_url,
+      params: { event: invalid_event },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    assert_includes @response.body, "Missing required parameters: timestamp"
+  end
+
+  test "should return bad request if timestamp is missing in multiple events" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:timestamp)
+
+    post api_v1_events_url,
+      params: { events: [ @valid_event, invalid_event ] },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "timestamp" ]
+  end
+
+  test "should return bad request if user_id is missing in single event" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:user_id)
+
+    post api_v1_events_url,
+      params: { event: invalid_event },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    assert_includes @response.body, "Missing required parameters: user_id"
+  end
+
+  test "should return bad request if user_id is missing in multiple events" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:user_id)
+
+    post api_v1_events_url,
+      params: { events: [ @valid_event, invalid_event ] },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "user_id" ]
   end
 
   test "should reject non-POST requests" do
@@ -41,99 +122,9 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should return unauthorized for invalid API secret" do
     post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "example_event",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
+      params: { event: @valid_event },
       headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
 
-      assert_response :unauthorized
-  end
-
-  test "should return bad request if event_type is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
-  end
-
-  # NOTE the controller only enforces that context is not empty.
-  # This should be refactored later to ensure application_id is within
-  # the context
-  test "should return bad request if application_id is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "New Sign Up",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {}
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
-  end
-
-  test "should return bad request if timestamp is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "new_user_created",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
-  end
-
-  test "should return bad request if user_id is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "example_event",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
+    assert_response :unauthorized
   end
 end
