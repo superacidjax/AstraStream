@@ -5,14 +5,20 @@ class Api::V1::EventsController < ApplicationController
     if missing_required_params.present?
       render_error(missing_required_params)
     else
-      event_data[:application_id] = @api_key.application_id
+      event_data[:properties][:application_id] = @api_key.application_id
       SendEvent.call(event_data)
       render json: event_data, status: :created
     end
   end
 
   def event_params
-    params.require(:event).permit(:event_type, :user_id, properties: {})
+    params.require(:event).permit(
+      :event_type,
+      :user_id,
+      :timestamp,
+      properties: {},
+      context: {}
+    )
   end
 
   def render_error(missing_params)
@@ -23,7 +29,7 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def missing_required_params
-    required_params = [ :event_type, :user_id, :properties ]
+    required_params = [ :event_type, :user_id, :properties, :timestamp, :context ]
     required_params.select { |param| event_params[param].blank? }
   end
 end

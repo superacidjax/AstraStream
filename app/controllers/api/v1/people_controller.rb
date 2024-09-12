@@ -14,6 +14,7 @@ class Api::V1::PeopleController < ApplicationController
   def person_params
     params.require(:person).permit(
       :user_id,
+      :timestamp,
       traits: {},
       context: {}
     )
@@ -27,7 +28,7 @@ class Api::V1::PeopleController < ApplicationController
   end
 
   def missing_required_params
-    required_params = [ :user_id, :traits ]
+    required_params = [ :user_id, :traits, :timestamp ]
     required_params.select { |param| person_params[param].blank? }
   end
 end
