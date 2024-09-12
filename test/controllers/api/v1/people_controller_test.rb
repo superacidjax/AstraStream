@@ -3,7 +3,7 @@ require "test_helper"
 class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
   setup do
     @api_key = api_keys(:one)
-    SendToWarehouse.stubs(:call)
+    SendPerson.stubs(:call)
   end
 
   test "should create person with valid API secret" do
@@ -16,7 +16,8 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
           },
           context: {
             application_id: "484893a"
-          }
+          },
+          timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
@@ -44,7 +45,11 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
           user_id: "12345",
           traits: {
             key: "value"
-          }
+          },
+          context: {
+            application_id: "484893a"
+          },
+          timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
       headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
@@ -52,13 +57,36 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
       assert_response :unauthorized
   end
 
+  test "should return bad request if timestamp is missing" do
+    post api_v1_people_url,
+      params: {
+        person: {
+          user_id: "1231231",
+          traits: {
+            key: "value"
+          },
+          context: {
+            application_id: "484893a"
+          }
+        }
+      },
+      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
+
+      assert_response :bad_request
+  end
+
+
   test "should return bad request if user_id is missing" do
     post api_v1_people_url,
       params: {
         person: {
           traits: {
             key: "value"
-          }
+          },
+          context: {
+            application_id: "484893a"
+          },
+          timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }

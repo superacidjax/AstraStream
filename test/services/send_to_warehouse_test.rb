@@ -20,14 +20,24 @@ class SendToWarehouseTest < ActiveSupport::TestCase
     SendEvent.call({
       "user_id" => "12345",
       "event_type" => "example_event",
-      "properties" => { "key" => "value" },
-      "application_id" => "14124jjj3424"
+      "properties" => {
+        "key" => "value"
+      },
+      "timestamp" => "2010-10-25T23:48:46+00:00",
+      "context" => {
+        "application_id" => "0191e61e-40a0-7584-b5b0-dae90f157d95"
+      }
     })
 
     SendPerson.call({
-      "user_id" => "414",
-      "traits" => { "key" => "value" },
-      "context" => { "application_id" => "value" }
+      "user_id" => "12345",
+      "traits" => {
+        "key" => "value"
+      },
+      "context" => {
+        "application_id" => "94948"
+      },
+      "timestamp" => "2010-10-25T23:48:46+00:00"
     })
   end
 end
