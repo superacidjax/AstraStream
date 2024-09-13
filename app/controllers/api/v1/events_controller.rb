@@ -6,11 +6,19 @@ class Api::V1::EventsController < ApplicationController
     elsif batch_event?
       handle_batch_event
     else
-      render_error([ "No valid event or events array provided" ])
+      render_error(["No valid event or events array provided"])
     end
   end
 
   private
+
+  def set_api_key
+    # Assuming @api_key should be set via some authentication mechanism.
+    @api_key = ApiKey.find_by(api_secret: extract_api_secret_from_header)
+    if @api_key.blank?
+      render json: { error: "API key not found or invalid" }, status: :unauthorized
+    end
+  end
 
   def single_event?
     params[:event].present?
@@ -64,6 +72,7 @@ class Api::V1::EventsController < ApplicationController
     end
 
     if errors.empty?
+      # Send events to SendEvent in bulk
       SendEvent.call(events)
     end
 
@@ -88,8 +97,9 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def generate_context
+    # Ensure @api_key is correctly set
     raise ArgumentError, "API key not set" if @api_key.blank?
 
-    { application_id: @api_key.application_id, generated_at: Time.current }
+    { application_id: @api_key.application_id, generated_at: Time.current.iso8601 }
   end
 end

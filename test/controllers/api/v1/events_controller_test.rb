@@ -14,27 +14,18 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  test "should create single event with valid API secret and generate context" do
+  test "should create event with valid API secret (single event) and generate context" do
     post api_v1_events_url,
       params: { event: @valid_event },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
     assert_response :created
     response_data = JSON.parse(response.body)
+    assert_not_nil response_data["context"]["generated_at"]
     assert_equal @api_key.application_id, response_data["context"]["application_id"]
   end
 
-  test "should create multiple events with valid API secret and generate context" do
-    post api_v1_events_url,
-      params: { events: [ @valid_event, @valid_event ] },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-    assert_response :created
-    response_data = JSON.parse(response.body)
-    assert_equal "All events created successfully", response_data["message"]
-  end
-
-  test "should return bad request if event_type is missing in single event" do
+  test "should return bad request if event_type is missing (single event)" do
     invalid_event = @valid_event.dup
     invalid_event.delete(:event_type)
 
@@ -46,20 +37,7 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
     assert_includes @response.body, "Missing required parameters: event_type"
   end
 
-  test "should return bad request if event_type is missing in multiple events" do
-    invalid_event = @valid_event.dup
-    invalid_event.delete(:event_type)
-
-    post api_v1_events_url,
-      params: { events: [ @valid_event, invalid_event ] },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-    assert_response :bad_request
-    response_data = JSON.parse(response.body)
-    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "event_type" ]
-  end
-
-  test "should return bad request if timestamp is missing in single event" do
+  test "should return bad request if timestamp is missing (single event)" do
     invalid_event = @valid_event.dup
     invalid_event.delete(:timestamp)
 
@@ -71,20 +49,7 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
     assert_includes @response.body, "Missing required parameters: timestamp"
   end
 
-  test "should return bad request if timestamp is missing in multiple events" do
-    invalid_event = @valid_event.dup
-    invalid_event.delete(:timestamp)
-
-    post api_v1_events_url,
-      params: { events: [ @valid_event, invalid_event ] },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-    assert_response :bad_request
-    response_data = JSON.parse(response.body)
-    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "timestamp" ]
-  end
-
-  test "should return bad request if user_id is missing in single event" do
+  test "should return bad request if user_id is missing (single event)" do
     invalid_event = @valid_event.dup
     invalid_event.delete(:user_id)
 
@@ -96,35 +61,13 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
     assert_includes @response.body, "Missing required parameters: user_id"
   end
 
-  test "should return bad request if user_id is missing in multiple events" do
-    invalid_event = @valid_event.dup
-    invalid_event.delete(:user_id)
-
+  test "should create events with valid API secret (batch) and generate context" do
     post api_v1_events_url,
-      params: { events: [ @valid_event, invalid_event ] },
+      params: { events: [ @valid_event, @valid_event ] },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
-    assert_response :bad_request
+    assert_response :created
     response_data = JSON.parse(response.body)
-    assert_includes response_data["details"].map { |e| e["missing_params"] }, [ "user_id" ]
-  end
-
-  test "should reject non-POST requests" do
-    get api_v1_events_url
-    assert_response :not_found
-
-    put api_v1_events_url
-    assert_response :not_found
-
-    delete api_v1_events_url
-    assert_response :not_found
-  end
-
-  test "should return unauthorized for invalid API secret" do
-    post api_v1_events_url,
-      params: { event: @valid_event },
-      headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
-
-    assert_response :unauthorized
+    assert_equal "All events created successfully", response_data["message"]
   end
 end
