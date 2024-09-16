@@ -7,6 +7,7 @@ gem "pg", "~> 1.5"
 gem "puma", ">= 5.0"
 gem "uuid7"
 gem "rudder-sdk-ruby"
+gem "good_job"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
