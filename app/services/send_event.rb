@@ -1,13 +1,11 @@
 class SendEvent < SendToWarehouse
   def self.call(data)
     analytics = self.initialize_rudder
-    events = data.is_a?(Array) ? data : [ data ]  # Handle single or multiple events
+    events = data.is_a?(Array) ? data : [ data ]
 
     if events.size == 1
-      # For a single event, raise an error immediately if it's invalid
       self.track_event(events.first, analytics)
     else
-      # For multiple events, process valid ones and log the invalid ones
       valid_events = []
       invalid_events = []
 
@@ -24,7 +22,6 @@ class SendEvent < SendToWarehouse
         Rails.logger.error("Some events were not processed: #{invalid_events.to_json}")
       end
 
-      # Optional: You can return some summary information here if needed
       {
         processed_count: valid_events.size,
         errors: invalid_events
@@ -35,7 +32,6 @@ class SendEvent < SendToWarehouse
   private
 
   def self.track_event(data, analytics)
-    # Ensure all required fields are present
     self.error_for_missing(
       [ "user_id", "event_type", "properties", "context", "timestamp" ],
       data
@@ -46,7 +42,7 @@ class SendEvent < SendToWarehouse
       event: data["event_type"],
       properties: data["properties"],
       context: data["context"],
-      timestamp: data["timestamp"]
+      timestamp: data["timestamp"].to_time
     )
   end
 

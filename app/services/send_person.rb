@@ -4,11 +4,9 @@ class SendPerson < SendToWarehouse
     people = data.is_a?(Array) ? data : [ data ]
 
     if people.size == 1
-      # For single person, raise an error if invalid
       self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], people.first)
       self.identify_person(people.first, analytics)
     else
-      # For multiple people, process valid and log invalid
       valid_people = []
       invalid_people = []
 
@@ -36,7 +34,7 @@ class SendPerson < SendToWarehouse
       user_id: data["user_id"],
       traits: data["traits"],
       context: data["context"],
-      timestamp: data["timestamp"]
+      timestamp: data["timestamp"].to_time
     )
   end
 end

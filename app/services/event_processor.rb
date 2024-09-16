@@ -18,6 +18,6 @@ class EventProcessor < BaseProcessor
   end
 
   def process_valid_item(valid_event)
-    SendEvent.call(valid_event)
+    SendEventJob.perform_later(valid_event)
   end
 end

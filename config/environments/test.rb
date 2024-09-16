@@ -11,6 +11,9 @@ Rails.application.configure do
   # While tests run files are not watched, reloading is not necessary.
   config.enable_reloading = false
 
+  # Active Job
+  Rails.application.config.active_job.queue_adapter = :test
+
   # encrypts fixtures
   config.active_record.encryption.encrypt_fixtures = true
 
