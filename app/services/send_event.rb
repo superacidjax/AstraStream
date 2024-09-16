@@ -1,7 +1,7 @@
 class SendEvent < SendToWarehouse
   def self.call(data)
     analytics = self.initialize_rudder
-    events = data.is_a?(Array) ? data : [data]  # Handle single or multiple events
+    events = data.is_a?(Array) ? data : [ data ]  # Handle single or multiple events
 
     if events.size == 1
       # For a single event, raise an error immediately if it's invalid
@@ -25,7 +25,7 @@ class SendEvent < SendToWarehouse
       end
 
       # Optional: You can return some summary information here if needed
-      return {
+      {
         processed_count: valid_events.size,
         errors: invalid_events
       }
@@ -37,7 +37,7 @@ class SendEvent < SendToWarehouse
   def self.track_event(data, analytics)
     # Ensure all required fields are present
     self.error_for_missing(
-      ["user_id", "event_type", "properties", "context", "timestamp"],
+      [ "user_id", "event_type", "properties", "context", "timestamp" ],
       data
     )
 

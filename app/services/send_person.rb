@@ -1,7 +1,7 @@
 class SendPerson < SendToWarehouse
   def self.call(data)
     analytics = self.initialize_rudder
-    people = data.is_a?(Array) ? data : [data]
+    people = data.is_a?(Array) ? data : [ data ]
 
     if people.size == 1
       # For single person, raise an error if invalid

@@ -59,7 +59,7 @@ class SendEventTest < ActiveSupport::TestCase
       timestamp: event_data_2["timestamp"]
     )
 
-    result = SendEvent.call([event_data_1, event_data_2])
+    result = SendEvent.call([ event_data_1, event_data_2 ])
     assert_equal 2, result[:processed_count]
     assert_empty result[:errors]
   end
@@ -92,7 +92,7 @@ class SendEventTest < ActiveSupport::TestCase
       "Some events were not processed: [{\"event\":{\"event_type\":\"another_event\",\"properties\":{\"key\":\"another_value\"},\"timestamp\":\"2011-11-25T12:34:56+00:00\",\"context\":{\"application_id\":\"0191e61e-40a0-7584-b5b0-dae90f157d95\"}},\"error\":\"Missing required parameters: user_id\"}]"
     )
 
-    result = SendEvent.call([event_data_1, event_data_2])
+    result = SendEvent.call([ event_data_1, event_data_2 ])
     assert_equal 1, result[:processed_count]
     assert_equal 1, result[:errors].size
   end
