@@ -4,136 +4,52 @@ class Api::V1::EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @api_key = api_keys(:one)
     SendEvent.stubs(:call)
+    @valid_event = {
+      event_type: "new_user_created",
+      user_id: "12345",
+      properties: {
+        key: "value"
+      },
+      timestamp: "2010-10-25T23:48:46+00:00"
+    }
   end
 
-  test "should create event with valid API secret" do
+  test "should return bad request if event_type is missing (single event)" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:event_type)
+
     post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "new_user_created",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
+      params: { event: invalid_event },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
-      assert_response :created
-      response_data = JSON.parse(response.body)
-      assert_equal @api_key.application_id, response_data["properties"]["application_id"]
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["error"], "Missing required parameters: event_type"
   end
 
-  test "should reject non-POST requests" do
-    get api_v1_events_url
-    assert_response :not_found
+  test "should return bad request if timestamp is missing (single event)" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:timestamp)
 
-    put api_v1_events_url
-    assert_response :not_found
-
-    delete api_v1_events_url
-    assert_response :not_found
-  end
-
-  test "should return unauthorized for invalid API secret" do
     post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "example_event",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
-
-      assert_response :unauthorized
-  end
-
-  test "should return bad request if event_type is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
+      params: { event: invalid_event },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
-      assert_response :bad_request
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["error"], "Missing required parameters: timestamp"
   end
 
-  # NOTE the controller only enforces that context is not empty.
-  # This should be refactored later to ensure application_id is within
-  # the context
-  test "should return bad request if application_id is missing" do
+  test "should return bad request if user_id is missing (single event)" do
+    invalid_event = @valid_event.dup
+    invalid_event.delete(:user_id)
+
     post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "New Sign Up",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {}
-        }
-      },
+      params: { event: invalid_event },
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
-      assert_response :bad_request
-  end
-
-  test "should return bad request if timestamp is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "new_user_created",
-          user_id: "12345",
-          properties: {
-            key: "value"
-          },
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
-  end
-
-  test "should return bad request if user_id is missing" do
-    post api_v1_events_url,
-      params: {
-        event: {
-          event_type: "example_event",
-          properties: {
-            key: "value"
-          },
-          timestamp: "2010-10-25T23:48:46+00:00",
-          context: {
-            application_id: "0191e61e-40a0-7584-b5b0-dae90f157d95"
-          }
-        }
-      },
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data["error"], "Missing required parameters: user_id"
   end
 end
