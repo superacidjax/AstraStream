@@ -5,6 +5,8 @@ class PersonProcessorTest < ActiveSupport::TestCase
     private
 
     def process_valid_item(valid_person)
+      # Simulate the event processing logic
+      valid_person[:processed] = true
     end
   end
 
@@ -34,6 +36,7 @@ class PersonProcessorTest < ActiveSupport::TestCase
 
     assert_equal :created, processor.status
     assert_equal @valid_person, processor.result
+    assert @valid_person[:processed], "Person should be marked as processed"
   end
 
   test "should return bad_request for a single person with missing user_id" do
@@ -65,7 +68,7 @@ class PersonProcessorTest < ActiveSupport::TestCase
     )
     processor.process
 
-    assert_not_nil processor.result["context"][:generated_at], "generated_at should be present"
-    assert_equal @api_key.application_id, processor.result["context"][:application_id]
+    assert_not_nil processor.result["context"]["generated_at"], "generated_at should be present"
+    assert_equal @api_key.application_id, processor.result["context"]["application_id"]
   end
 end

@@ -8,13 +8,21 @@ class BaseProcessorTest < ActiveSupport::TestCase
       :test_item
     end
 
+    def permitted_item_data(item_data)
+      # Mock permitted data, simulate processing
+      if item_data.respond_to?(:permit)
+        item_data.permit(:attribute_one, :attribute_two).to_h
+      else
+        item_data
+      end
+    end
+
     def required_params
       %w[attribute_one attribute_two]
     end
 
     def process_valid_item(item)
       # Simulate processing of a valid item
-      # For test purposes, we can just return true or modify the item in some way
       item[:processed] = true
     end
   end

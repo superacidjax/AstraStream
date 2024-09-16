@@ -10,10 +10,18 @@ class BaseProcessor
 
   def process
     item = @params[item_key]
-    process_result(item)
+    prepared_item = prepare_item(item)
+    process_result(prepared_item)
   end
 
   private
+
+  def prepare_item(item_data)
+    # Permit the necessary parameters and generate context
+    permitted_item = permitted_item_data(item_data)
+    permitted_item["context"] = generate_context
+    permitted_item
+  end
 
   def process_result(item)
     errors = process_or_log_errors(item)
@@ -47,6 +55,10 @@ class BaseProcessor
     errors
   end
 
+  def permitted_item_data(item_data)
+    raise NotImplementedError, "Subclasses must define permitted_item_data"
+  end
+
   def item_key
     raise NotImplementedError, "Subclasses must define item_key"
   end
@@ -68,8 +80,8 @@ class BaseProcessor
     raise ArgumentError, "API key not set" if @api_key.blank?
 
     {
-      "application_id": @api_key.application_id,
-      "generated_at": Time.current.iso8601
+      "application_id" => @api_key.application_id,
+      "generated_at" => Time.current.iso8601
     }
   end
 end

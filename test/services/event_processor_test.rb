@@ -84,8 +84,8 @@ class EventProcessorTest < ActiveSupport::TestCase
     )
     processor.process
 
-    assert_not_nil processor.result[:context][:generated_at]
+    assert_not_nil processor.result["context"]["generated_at"]
     assert_equal @api_key.application_id,
-      processor.result[:context][:application_id]
+      processor.result["context"]["application_id"]
   end
 end
