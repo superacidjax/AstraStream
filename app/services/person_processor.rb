@@ -1,4 +1,6 @@
 class PersonProcessor < BaseProcessor
+  include ItemValidator
+
   private
 
   def item_key
@@ -6,11 +8,14 @@ class PersonProcessor < BaseProcessor
   end
 
   def permitted_item_data(person_data)
-    if person_data.respond_to?(:permit)
-      person_data.permit(:user_id, :timestamp, traits: {}).to_h
-    else
-      person_data
-    end
+    return person_data unless person_data.respond_to?(:permit)
+
+    permitted = person_data.permit(:user_id, :timestamp).to_h
+    traits = validate_items(person_data[:traits], "traits")
+    return if @status == :bad_request
+
+    permitted["traits"] = traits
+    permitted
   end
 
   def required_params

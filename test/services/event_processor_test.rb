@@ -11,7 +11,7 @@ class EventProcessorTest < ActiveSupport::TestCase
   end
 
   setup do
-    @api_key = api_keys(:one)  # Mock API key
+    @api_key = api_keys(:one)
     @valid_event = {
       "event_type" => "new_user_created",
       "user_id" => "12345",
@@ -53,7 +53,7 @@ class EventProcessorTest < ActiveSupport::TestCase
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error],
+    assert_includes processor.result[:errors],
       "Missing required parameters: timestamp"
   end
 
@@ -62,7 +62,7 @@ class EventProcessorTest < ActiveSupport::TestCase
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error], "Missing required parameters: event_type"
+    assert_includes processor.result[:errors], "Missing required parameters: event_type"
   end
 
   test "should return bad_request if user_id is missing in single event" do
@@ -73,7 +73,7 @@ class EventProcessorTest < ActiveSupport::TestCase
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error],
+    assert_includes processor.result[:errors],
       "Missing required parameters: user_id"
   end
 
