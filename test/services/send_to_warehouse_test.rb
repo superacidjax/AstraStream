@@ -16,18 +16,17 @@ class SendToWarehouseTest < ActiveSupport::TestCase
     @mock_analytics.stubs(:track)
     @mock_analytics.stubs(:identify)
 
-    # Updated structure of properties to match expectations
     SendEvent.call({
       "user_id" => "12345",
       "event_type" => "example_event",
-      "properties" => [{ "key" => "value", "type" => "string" }],  # Use an array of key-value pairs with types
+      "properties" => [ { "key" => "value", "type" => "string" } ],
       "timestamp" => "2010-10-25T23:48:46+00:00",
       "context" => { "application_id" => "0191e61e-40a0-7584-b5b0-dae90f157d95" }
     })
 
     SendPerson.call({
       "user_id" => "12345",
-      "traits" => [{ "key" => "value", "type" => "string" }],  # Use an array of key-value pairs with types
+      "traits" => [ { "key" => "value", "type" => "string" } ],
       "context" => { "application_id" => "94948" },
       "timestamp" => "2010-10-25T23:48:46+00:00"
     })
