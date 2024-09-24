@@ -1,40 +1,25 @@
 class SendPerson < SendToWarehouse
-  def self.call(data)
-    analytics = self.initialize_rudder
-    people = data.is_a?(Array) ? data : [ data ]
+  def self.call(person)
+    error_for_missing([ "user_id", "context", "traits", "timestamp" ], person)
 
-    if people.size == 1
-      self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], people.first)
-      self.identify_person(people.first, analytics)
-    else
-      valid_people = []
-      invalid_people = []
-
-      people.each do |person|
-        begin
-          self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], person)
-          valid_people << person
-        rescue ArgumentError => e
-          invalid_people << { person: person, error: e.message }
-        end
-      end
-
-      valid_people.each { |person| self.identify_person(person, analytics) }
-
-      if invalid_people.any?
-        Rails.logger.error "Some people were not processed: #{invalid_people.to_json}"
-      end
-    end
+    identify_person(person)
   end
 
   private
 
-  def self.identify_person(data, analytics)
+  def self.identify_person(data)
     analytics.identify(
       user_id: data["user_id"],
-      traits: data["traits"],
+      traits: flatten_traits_with_type(data["traits"]),
       context: data["context"],
       timestamp: data["timestamp"].to_time
     )
+  end
+
+  def self.flatten_traits_with_type(traits)
+    traits.each_with_object({}) do |trait, hash|
+      key, value = trait.keys.first, trait.values.first
+      hash[key] = { "value" => value, "type" => trait["type"] }
+    end
   end
 end
