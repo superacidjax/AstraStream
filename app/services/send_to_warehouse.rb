@@ -21,28 +21,16 @@ class SendToWarehouse
     raise ArgumentError, "Missing required parameters: #{missing_params.join(', ')}" if missing_params.any?
   end
 
-  # General method for processing single or batch data
-  def self.process(data, required_params:, single_method:)
-    items = data.is_a?(Array) ? data : [data]
-
-    valid_items = []
-    invalid_items = []
-
-    items.each do |item|
-      begin
-        # Make sure to check for missing required params here
-        error_for_missing(required_params, item)
-        send(single_method, item)
-        valid_items << item
-      rescue ArgumentError => e
-        invalid_items << { item: item, error: e.message }
-      end
+  # General method for processing single item
+  def self.process(item, required_params:, single_method:)
+    begin
+      # Make sure to check for missing required params here
+      error_for_missing(required_params, item)
+      send(single_method, item)
+      { success: true }
+    rescue ArgumentError => e
+      Rails.logger.error("Item was not processed: #{item.to_json}, Error: #{e.message}")
+      { success: false, error: e.message }
     end
-
-    if invalid_items.any?
-      Rails.logger.error("Some items were not processed: #{invalid_items.to_json}")
-    end
-
-    { processed_count: valid_items.size, errors: invalid_items }
   end
 end
