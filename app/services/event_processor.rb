@@ -1,6 +1,4 @@
 class EventProcessor < BaseProcessor
-  include ItemValidator
-
   private
 
   def item_key
@@ -8,14 +6,11 @@ class EventProcessor < BaseProcessor
   end
 
   def permitted_item_data(event_data)
-    return event_data unless event_data.respond_to?(:permit)
-
-    permitted = event_data.permit(:event_type, :user_id, :timestamp).to_h
-    properties = validate_items(event_data[:properties], "properties")
-    return if @status == :bad_request
-
-    permitted["properties"] = properties
-    permitted
+    if event_data.respond_to?(:permit)
+      event_data.permit(:event_type, :user_id, :timestamp, properties: {}).to_h
+    else
+      event_data
+    end
   end
 
   def required_params

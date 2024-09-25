@@ -9,6 +9,7 @@ class BaseProcessorTest < ActiveSupport::TestCase
     end
 
     def permitted_item_data(item_data)
+      # Mock permitted data, simulate processing
       if item_data.respond_to?(:permit)
         item_data.permit(:attribute_one, :attribute_two).to_h
       else
@@ -27,9 +28,9 @@ class BaseProcessorTest < ActiveSupport::TestCase
   end
 
   setup do
-    @api_key = api_keys(:one)
+    @api_key = api_keys(:one)  # Mock API key
     @valid_item = { "attribute_one" => "value1", "attribute_two" => "value2" }
-    @invalid_item = { "attribute_one" => "value1" }
+    @invalid_item = { "attribute_one" => "value1" }  # Missing attribute_two
   end
 
   test "should process valid items" do
@@ -50,7 +51,7 @@ class BaseProcessorTest < ActiveSupport::TestCase
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:errors],
+    assert_includes processor.result[:error],
       "Missing required parameters: attribute_two"
   end
 end

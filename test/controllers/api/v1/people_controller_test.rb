@@ -6,9 +6,9 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
     SendPerson.stubs(:call)
     @valid_person = {
       user_id: "0191faa2-b4d7-78bc-8cdc-6a4dc176ebb4",
-      traits: [
-        { bmi: "28", type: "numeric" }
-      ],
+      traits: {
+        key: "value"
+      },
       timestamp: "2010-10-25T23:48:46+00:00"
     }
   end
@@ -16,7 +16,6 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
   test "should create person with valid API secret" do
     post api_v1_people_url,
       params: { person: @valid_person },
-      as: :json,
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
     assert_response :created
@@ -42,41 +41,15 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
       params: {
         person: {
           user_id: "12345",
-          traits: [ {
-            bmi: "28",
-            type: "numeric"
-          } ],
+          traits: {
+            key: "value"
+          },
           timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
-      as: :json,
       headers: { Authorization: "Basic #{Base64.encode64('invalid_secret:')}" }
 
       assert_response :unauthorized
-  end
-
-  test "should return bad request for missing trait type" do
-    post api_v1_people_url,
-      params: {
-        person: {
-          user_id: "12345",
-          traits:
-            [
-              {
-                bmi: "28"
-              },
-              {
-                is_happy: "true",
-                type: "boolean"
-              }
-            ],
-          timestamp: "2010-10-25T23:48:46+00:00"
-        }
-      },
-      as: :json,
-      headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
-
-      assert_response :bad_request
   end
 
   test "should return bad request if timestamp is missing" do
@@ -84,13 +57,11 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
       params: {
         person: {
           user_id: "1231231",
-          traits: [ {
-            bmi: "28",
-            type: "numeric"
-          } ]
+          traits: {
+            key: "value"
+          }
         }
       },
-      as: :json,
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
       assert_response :bad_request
@@ -100,14 +71,12 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
     post api_v1_people_url,
       params: {
         person: {
-          traits: [ {
-            bmi: "28",
-            type: "numeric"
-          } ],
+          traits: {
+            key: "value"
+          },
           timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
-      as: :json,
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
       assert_response :bad_request
@@ -121,7 +90,6 @@ class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
           timestamp: "2010-10-25T23:48:46+00:00"
         }
       },
-      as: :json,
       headers: { Authorization: "Basic #{Base64.encode64(@api_key.api_secret)}" }
 
       assert_response :bad_request

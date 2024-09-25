@@ -11,17 +11,14 @@ class BaseProcessor
   def process
     item = @params[item_key]
     prepared_item = prepare_item(item)
-    return if @status == :bad_request || prepared_item.nil?
-
     process_result(prepared_item)
   end
 
   private
 
   def prepare_item(item_data)
+    # Permit the necessary parameters and generate context
     permitted_item = permitted_item_data(item_data)
-    return if permitted_item.nil?
-
     permitted_item["context"] = generate_context
     permitted_item
   end
@@ -31,7 +28,7 @@ class BaseProcessor
 
     if errors.present?
       @result = {
-        errors: errors.map { |e| e[:error] },
+        error: errors.first[:error],
         submitted: errors.first[:item]
       }
       @status = :bad_request
@@ -43,8 +40,6 @@ class BaseProcessor
   end
 
   def process_or_log_errors(item)
-    return [ { error: "Invalid item data", item: item } ] if item.nil?
-
     errors = []
     missing_params = find_missing_required_params(item)
 

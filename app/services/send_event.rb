@@ -1,31 +1,58 @@
 class SendEvent < SendToWarehouse
   def self.call(data)
-    process(
-      data,
-      required_params: [ "user_id", "event_type", "properties", "context", "timestamp" ],
-      single_method: :track_event
-    )
+    analytics = self.initialize_rudder
+    events = data.is_a?(Array) ? data : [ data ]
+
+    if events.size == 1
+      self.track_event(events.first, analytics)
+    else
+      valid_events = []
+      invalid_events = []
+
+      events.each_with_index do |event, index|
+        begin
+          self.track_event(event, analytics)
+          valid_events << event
+        rescue ArgumentError => e
+          invalid_events << { event: event, error: e.message }
+        end
+      end
+
+      if invalid_events.any?
+        Rails.logger.error("Some events were not processed: #{invalid_events.to_json}")
+      end
+
+      {
+        processed_count: valid_events.size,
+        errors: invalid_events
+      }
+    end
   end
 
   private
 
-  def self.track_event(data)
-    error_for_missing([ "user_id", "event_type", "properties", "context", "timestamp" ], data)
+  def self.track_event(data, analytics)
+    self.error_for_missing(
+      [ "user_id", "event_type", "properties", "context", "timestamp" ],
+      data
+    )
 
     analytics.track(
       user_id: data["user_id"],
       event: data["event_type"],
-      properties: convert_properties_to_hash(data["properties"]),
+      properties: data["properties"],
       context: data["context"],
       timestamp: data["timestamp"].to_time
     )
   end
 
-  def self.convert_properties_to_hash(properties)
-    properties.each_with_object({}) do |property, hash|
-      key = property.keys.first
-      value = { "value" => property[key], "type" => property["type"] }
-      hash[key] = value
+  def self.error_for_missing(required_fields, data)
+    missing_params = required_fields.select do |field|
+      data[field].nil? || data[field] == "" || (field == "context" && data["context"]["application_id"].blank?)
+    end
+
+    if missing_params.any?
+      raise ArgumentError, "Missing required parameters: #{missing_params.join(', ')}"
     end
   end
 end
