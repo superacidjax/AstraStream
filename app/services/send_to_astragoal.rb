@@ -12,6 +12,7 @@ class SendToAstragoal
     }
 
     send_request("people", person_data)
+    logger.debug "Person Data: #{person_data}"
   end
 
   def self.send_event(event_data)
@@ -34,8 +35,9 @@ class SendToAstragoal
     add_basic_auth(request)
 
     request.body = data.to_json
-    Net::HTTP.start(uri.hostname, uri.port) do |http|
+    response = Net::HTTP.start(uri.hostname, uri.port) do |http|
       http.request(request)
+      logger.debug "Brian HERE! #{response.body}"
     end
   end
 
