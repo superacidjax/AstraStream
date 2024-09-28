@@ -12,7 +12,7 @@ Rails.application.configure do
   config.enable_reloading = false
 
   # Active Job
-  Rails.application.config.active_job.queue_adapter = :test
+  config.active_job.queue_adapter = :good_job
 
   # encrypts fixtures
   config.active_record.encryption.encrypt_fixtures = true

@@ -16,14 +16,14 @@ class SendEventJobTest < ActiveJob::TestCase
     @event["context"] = @context
   end
 
-  test "should enqueue job" do
-    assert_enqueued_with(job: SendEventJob, args: [ @event ]) do
+  test "should enqueue job with GoodJob adapter" do
+    assert_difference -> { GoodJob::Execution.count }, 1 do
       SendEventJob.perform_later(@event)
     end
   end
 
   test "should perform job and call SendEvent" do
-    SendEvent.expects(:call).with(@event) # Expect SendEvent to be called with the event
+    SendEvent.expects(:call).with(@event)
 
     perform_enqueued_jobs do
       SendEventJob.perform_later(@event)

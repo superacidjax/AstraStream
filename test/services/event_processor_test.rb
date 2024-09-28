@@ -88,4 +88,17 @@ class EventProcessorTest < ActiveSupport::TestCase
     assert_equal @api_key.application_id,
       processor.result["context"]["application_id"]
   end
+
+  test "should enqueue SendEventJob for a valid event" do
+    processor = EventProcessor.new(
+      params: { event: @valid_event },
+      api_key: @api_key
+    )
+
+    assert_difference -> { GoodJob::Execution.count }, 1 do
+      processor.process
+    end
+
+    assert_equal :created, processor.status
+  end
 end
