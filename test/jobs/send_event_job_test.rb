@@ -16,8 +16,8 @@ class SendEventJobTest < ActiveJob::TestCase
     @event["context"] = @context
   end
 
-  test "should enqueue job with GoodJob adapter" do
-    assert_difference -> { GoodJob::Execution.count }, 1 do
+  test "should enqueue job with test adapter" do
+    assert_enqueued_with(job: SendEventJob, args: [ @event ]) do
       SendEventJob.perform_later(@event)
     end
   end

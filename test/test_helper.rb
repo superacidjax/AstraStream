@@ -1,4 +1,5 @@
 require "simplecov"
+require 'webmock/minitest'
 SimpleCov.start "rails" do
   add_filter "/channels/"
   add_filter "/mailers/"
