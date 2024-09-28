@@ -83,13 +83,9 @@ jobs:
           bundler-cache: true
 
       - name: Run test and public code coverage
-        uses: paambaati/codeclimate-action@v9.0.0
         env:
           CC_TEST_REPORTER_ID: 506694feb1cf5b6a429f76868241e967a38bec8f7a1563e1c6acf6e5cbe54aab
           RAILS_ENV: test
           DATABASE_URL: postgres://postgres:postgres@localhost:5432
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-        with:
-          coverageCommand: npm run coverage
-          debug: true
         run: bin/rails db:test:prepare test
