@@ -24,6 +24,8 @@ class SendPersonJobTest < ActiveJob::TestCase
   test "should perform job and call SendPerson" do
     SendPerson.expects(:call).with(@person)
 
+    SendToAstragoal.stubs(:send_person).returns(true)
+
     perform_enqueued_jobs do
       SendPersonJob.perform_later(@person)
     end

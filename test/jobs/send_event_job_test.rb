@@ -25,6 +25,8 @@ class SendEventJobTest < ActiveJob::TestCase
   test "should perform job and call SendEvent" do
     SendEvent.expects(:call).with(@event)
 
+    SendToAstragoal.stubs(:send_event).returns(true)
+
     perform_enqueued_jobs do
       SendEventJob.perform_later(@event)
     end

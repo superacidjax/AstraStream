@@ -465,14 +465,11 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_event.rb": {
+      "/Users/brian/development/streamcamp/app/services/send_person.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          null,
-          null,
           1,
           1,
           1,
@@ -482,7 +479,6 @@
           null,
           1,
           1,
-          null,
           null,
           null,
           null,
@@ -511,7 +507,7 @@
           null,
           1,
           1,
-          5,
+          4,
           null,
           null,
           1,
@@ -530,7 +526,60 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/jobs/send_event_job.rb": {
+      "/Users/brian/development/streamcamp/app/services/send_to_astragoal.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/streamcamp/app/jobs/send_person_job.rb": {
         "lines": [
           1,
           1,
@@ -548,59 +597,6 @@
           null,
           null,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astragoal.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
           null,
           null
         ]
@@ -657,7 +653,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/send_person_job.rb": {
+      "/Users/brian/development/streamcamp/app/jobs/send_event_job.rb": {
         "lines": [
           0,
           0,
@@ -821,7 +817,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_person.rb": {
+      "/Users/brian/development/streamcamp/app/services/send_event.rb": {
         "lines": [
           0,
           0,
@@ -830,9 +826,13 @@
           0,
           0,
           0,
+          0,
+          0,
+          0,
           null,
           0,
           null,
+          0,
           0,
           0,
           0,
@@ -847,7 +847,7 @@
         }
       }
     },
-    "timestamp": 1727528953
+    "timestamp": 1727532840
   },
   "Minitest-2": {
     "coverage": {
