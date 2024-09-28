@@ -288,6 +288,7 @@ DEPENDENCIES
   rubocop-rails-omakase
   rudder-sdk-ruby
   simplecov
+  simplecov_json_formatter
   uuid7
 
 RUBY VERSION

@@ -23,4 +23,5 @@ end
 group :test do
   gem "mocha"
   gem "simplecov", require: false
+  gem "simplecov_json_formatter"
 end
