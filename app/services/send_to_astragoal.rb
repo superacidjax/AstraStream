@@ -3,8 +3,6 @@ require "json"
 require "uri"
 
 class SendToAstragoal
-  BASE_URL = "http://localhost:3000/api/v1"
-
   def self.send_person(person)
     person_data = {
       user_id: person["user_id"],
@@ -31,7 +29,7 @@ class SendToAstragoal
   private
 
   def self.send_request(endpoint, data)
-    uri = URI.parse("#{BASE_URL}/#{endpoint}")
+    uri = URI.parse("#{astra_base_url}/#{endpoint}")
     request = Net::HTTP::Post.new(uri, "Content-Type" => "application/json")
     add_basic_auth(request)
 
@@ -39,6 +37,10 @@ class SendToAstragoal
     Net::HTTP.start(uri.hostname, uri.port) do |http|
       http.request(request)
     end
+  end
+
+  def self.astra_base_url
+    ENV["ASTRA_BASE_URL"]
   end
 
   def self.add_basic_auth(request)
