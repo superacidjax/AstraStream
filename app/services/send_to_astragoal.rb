@@ -3,6 +3,7 @@ require "json"
 require "uri"
 
 class SendToAstragoal
+  @@logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
   def self.send_person(person)
     person_data = {
       user_id: person["user_id"],
@@ -12,7 +13,7 @@ class SendToAstragoal
     }
 
     send_request("people", person_data)
-    logger.debug "Person Data: #{person_data}"
+    @@logger.debug "Person Data: #{person_data}"
   end
 
   def self.send_event(event_data)
@@ -37,8 +38,9 @@ class SendToAstragoal
     request.body = data.to_json
     response = Net::HTTP.start(uri.hostname, uri.port) do |http|
       http.request(request)
-      logger.debug "Brian HERE! #{response.body}"
     end
+
+    @@logger.debug "Brian HERE! #{response.body}"
   end
 
   def self.astra_base_url
