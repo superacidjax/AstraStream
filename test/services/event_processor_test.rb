@@ -5,13 +5,12 @@ class EventProcessorTest < ActiveSupport::TestCase
     private
 
     def process_valid_item(valid_event)
-      # Simulate the event processing logic
       valid_event[:processed] = true
     end
   end
 
   setup do
-    @api_key = api_keys(:one)  # Mock API key
+    @api_key = api_keys(:one)
     @valid_event = {
       "event_type" => "new_user_created",
       "user_id" => "12345",
@@ -36,9 +35,7 @@ class EventProcessorTest < ActiveSupport::TestCase
   end
 
   test "should process a single valid event" do
-    processor = TestEventProcessor.new(
-      params: { event: @valid_event }, api_key: @api_key
-    )
+    processor = TestEventProcessor.new(params: { event: @valid_event }, api_key: @api_key)
     processor.process
 
     assert_equal :created, processor.status
@@ -47,14 +44,11 @@ class EventProcessorTest < ActiveSupport::TestCase
   end
 
   test "should return bad_request for a single event with missing timestamp" do
-    processor = TestEventProcessor.new(
-      params: { event: @invalid_event_missing_timestamp }, api_key: @api_key
-    )
+    processor = TestEventProcessor.new(params: { event: @invalid_event_missing_timestamp }, api_key: @api_key)
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error],
-      "Missing required parameters: timestamp"
+    assert_includes processor.result[:error], "Missing required parameters: timestamp"
   end
 
   test "should return bad_request if event_type is missing in single event" do
@@ -66,26 +60,18 @@ class EventProcessorTest < ActiveSupport::TestCase
   end
 
   test "should return bad_request if user_id is missing in single event" do
-    processor = TestEventProcessor.new(
-      params: { event: @invalid_event_missing_user_id },
-      api_key: @api_key
-    )
+    processor = TestEventProcessor.new(params: { event: @invalid_event_missing_user_id }, api_key: @api_key)
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error],
-      "Missing required parameters: user_id"
+    assert_includes processor.result[:error], "Missing required parameters: user_id"
   end
 
   test "should generate context with application_id and timestamp" do
-    processor = TestEventProcessor.new(
-      params: { event: @valid_event },
-      api_key: @api_key
-    )
+    processor = TestEventProcessor.new(params: { event: @valid_event }, api_key: @api_key)
     processor.process
 
     assert_not_nil processor.result["context"]["generated_at"]
-    assert_equal @api_key.application_id,
-      processor.result["context"]["application_id"]
+    assert_equal @api_key.application_id, processor.result["context"]["application_id"]
   end
 end

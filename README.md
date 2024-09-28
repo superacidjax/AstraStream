@@ -1,24 +1,4 @@
-# README
+[![Test
+Coverage](https://api.codeclimate.com/v1/badges/54c840e53bfe60b19ef1/test_coverage)](https://codeclimate.com/repos/66f800ef715b39325ec20d90/test_coverage)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Maintainability](https://api.codeclimate.com/v1/badges/54c840e53bfe60b19ef1/maintainability)](https://codeclimate.com/repos/66f800ef715b39325ec20d90/maintainability)

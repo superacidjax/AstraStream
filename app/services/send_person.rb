@@ -1,30 +1,9 @@
-class SendPerson < SendToWarehouse
-  def self.call(data)
+class SendPerson < SendData
+  def self.call(person)
+    self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], person)
     analytics = self.initialize_rudder
-    people = data.is_a?(Array) ? data : [ data ]
-
-    if people.size == 1
-      self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], people.first)
-      self.identify_person(people.first, analytics)
-    else
-      valid_people = []
-      invalid_people = []
-
-      people.each do |person|
-        begin
-          self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], person)
-          valid_people << person
-        rescue ArgumentError => e
-          invalid_people << { person: person, error: e.message }
-        end
-      end
-
-      valid_people.each { |person| self.identify_person(person, analytics) }
-
-      if invalid_people.any?
-        Rails.logger.error "Some people were not processed: #{invalid_people.to_json}"
-      end
-    end
+    self.identify_person(person, analytics)
+    self.send_to_astragoal("send_person", person)
   end
 
   private

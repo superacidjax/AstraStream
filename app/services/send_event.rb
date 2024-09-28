@@ -1,42 +1,17 @@
-class SendEvent < SendToWarehouse
+class SendEvent < SendData
   def self.call(data)
+    self.error_for_missing(
+      [ "user_id", "event_type", "properties", "context", "timestamp" ],
+      data
+    )
     analytics = self.initialize_rudder
-    events = data.is_a?(Array) ? data : [ data ]
-
-    if events.size == 1
-      self.track_event(events.first, analytics)
-    else
-      valid_events = []
-      invalid_events = []
-
-      events.each_with_index do |event, index|
-        begin
-          self.track_event(event, analytics)
-          valid_events << event
-        rescue ArgumentError => e
-          invalid_events << { event: event, error: e.message }
-        end
-      end
-
-      if invalid_events.any?
-        Rails.logger.error("Some events were not processed: #{invalid_events.to_json}")
-      end
-
-      {
-        processed_count: valid_events.size,
-        errors: invalid_events
-      }
-    end
+    self.track_event(data, analytics)
+    self.send_to_astragoal("send_event", data)
   end
 
   private
 
   def self.track_event(data, analytics)
-    self.error_for_missing(
-      [ "user_id", "event_type", "properties", "context", "timestamp" ],
-      data
-    )
-
     analytics.track(
       user_id: data["user_id"],
       event: data["event_type"],
@@ -44,15 +19,5 @@ class SendEvent < SendToWarehouse
       context: data["context"],
       timestamp: data["timestamp"].to_time
     )
-  end
-
-  def self.error_for_missing(required_fields, data)
-    missing_params = required_fields.select do |field|
-      data[field].nil? || data[field] == "" || (field == "context" && data["context"]["application_id"].blank?)
-    end
-
-    if missing_params.any?
-      raise ArgumentError, "Missing required parameters: #{missing_params.join(', ')}"
-    end
   end
 end

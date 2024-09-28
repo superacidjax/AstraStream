@@ -9,7 +9,6 @@ class BaseProcessorTest < ActiveSupport::TestCase
     end
 
     def permitted_item_data(item_data)
-      # Mock permitted data, simulate processing
       if item_data.respond_to?(:permit)
         item_data.permit(:attribute_one, :attribute_two).to_h
       else
@@ -22,15 +21,16 @@ class BaseProcessorTest < ActiveSupport::TestCase
     end
 
     def process_valid_item(item)
-      # Simulate processing of a valid item
       item[:processed] = true
     end
   end
 
+  class IncompleteProcessor < BaseProcessor; end
+
   setup do
-    @api_key = api_keys(:one)  # Mock API key
+    @api_key = api_keys(:one)
     @valid_item = { "attribute_one" => "value1", "attribute_two" => "value2" }
-    @invalid_item = { "attribute_one" => "value1" }  # Missing attribute_two
+    @invalid_item = { "attribute_one" => "value1" }
   end
 
   test "should process valid items" do
@@ -51,7 +51,38 @@ class BaseProcessorTest < ActiveSupport::TestCase
     processor.process
 
     assert_equal :bad_request, processor.status
-    assert_includes processor.result[:error],
-      "Missing required parameters: attribute_two"
+    assert_includes processor.result[:error], "Missing required parameters: attribute_two"
+  end
+
+  test "should raise NotImplementedError for permitted_item_data" do
+    assert_raises(NotImplementedError) do
+      IncompleteProcessor.new(
+        params: { test_item: @valid_item }, api_key: @api_key
+      ).send(:permitted_item_data, @valid_item)
+    end
+  end
+
+  test "should raise NotImplementedError for item_key" do
+    assert_raises(NotImplementedError) do
+      IncompleteProcessor.new(
+        params: { test_item: @valid_item }, api_key: @api_key
+      ).send(:item_key)
+    end
+  end
+
+  test "should raise NotImplementedError for required_params" do
+    assert_raises(NotImplementedError) do
+      IncompleteProcessor.new(
+        params: { test_item: @valid_item }, api_key: @api_key
+      ).send(:required_params)
+    end
+  end
+
+  test "should raise NotImplementedError for process_valid_item" do
+    assert_raises(NotImplementedError) do
+      IncompleteProcessor.new(
+        params: { test_item: @valid_item }, api_key: @api_key
+      ).send(:process_valid_item, @valid_item)
+    end
   end
 end
