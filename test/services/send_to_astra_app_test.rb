@@ -24,7 +24,7 @@ class SendToAstraAppTest < ActiveSupport::TestCase
       }
     }
 
-    WebMock.disable_net_connect!(allow_localhost: true)  # Ensure no real HTTP requests are made
+    WebMock.disable_net_connect!(allow_localhost: true)  # Disable real HTTP connections
   end
 
   test "should send person data to the correct endpoint and call add_basic_auth" do
@@ -40,7 +40,10 @@ class SendToAstraAppTest < ActiveSupport::TestCase
         }.to_json,
         headers: {
           "Content-Type" => "application/json",
-          "Authorization" => "Basic #{Base64.encode64('test_username:test_password').strip}"
+          "Authorization" => "Basic #{Base64.strict_encode64('test_username:test_password').strip}",
+          "Accept" => "*/*",
+          "Host" => "localhost:3000",
+          "User-Agent" => "Ruby"
         }
       )
       .to_return(status: 200, body: "Success")
@@ -57,17 +60,21 @@ class SendToAstraAppTest < ActiveSupport::TestCase
           event: {
             event_type: "newSubscription",
             user_id: "12345",
-            timestamp: "2023-10-25T23:48:46+00:00",
-            application_id: "94948",
             properties: {
               "subscription_type" => "premium",
               "subscription_value" => "100"
-            }
+            },
+            timestamp: "2023-10-25T23:48:46+00:00",
+            application_id: "94948"
           }
         }.to_json,
         headers: {
           "Content-Type" => "application/json",
-          "Authorization" => "Basic #{Base64.encode64('test_username:test_password').strip}"
+          "Authorization" => "Basic #{Base64.strict_encode64('test_username:test_password').strip}",
+          "Accept" => "*/*",
+          "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+          "Host" => "localhost:3000",
+          "User-Agent" => "Ruby"
         }
       )
       .to_return(status: 200, body: "Success")
