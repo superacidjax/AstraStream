@@ -1,9 +1,7 @@
-class SendPerson < SendData
+class SendPersonToRudderstack < SendToRudderstack
   def self.call(person)
     self.error_for_missing([ "user_id", "context", "traits", "timestamp" ], person)
-    # analytics = self.initialize_rudder
-    # self.identify_person(person, analytics)
-    self.send_to_astragoal("send_person", person)
+    self.identify_person(person, self.initialize_rudder)
   end
 
   private

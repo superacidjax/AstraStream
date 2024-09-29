@@ -2,8 +2,8 @@
 
 one:
   application_id: "0191c1e3-60c2-743b-b4de-cd5d9f272403"
-  api_secret: "andorra_ajXvK7kxb9ZwJVNc8JavyegDHbk7v2"
+  api_secret: "astra_ajXvK7kxb9ZwJVNc8JavyegDHbk7v2"
 
 two:
   application_id: "0191c1e4-25e1-7f32-b0dc-2220a0fdb2ea"
-  api_secret: "andorra_qnzqG9FLSJwKVcMRuB2NHrA8EAbL2"
+  api_secret: "astra_qnzqG9FLSJwKVcMRuB2NHrA8EAbL2"

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SendPersonTest < ActiveSupport::TestCase
+class SendPersonToRudderstackTest < ActiveSupport::TestCase
   setup do
     @mock_analytics = mock("analytics")
     Rudder::Analytics.stubs(:new).returns(@mock_analytics)
@@ -11,8 +11,6 @@ class SendPersonTest < ActiveSupport::TestCase
       "context" => { "application_id" => "94948" },
       "timestamp" => "2010-10-25T23:48:46+00:00"
     }
-
-    SendToAstragoal.stubs(:send_person).returns(true)
   end
 
   test "should identify single person with correct data" do
@@ -23,7 +21,7 @@ class SendPersonTest < ActiveSupport::TestCase
       timestamp: @person["timestamp"]
     )
 
-    SendPerson.call(@person)
+    SendPersonToRudderstack.call(@person)
   end
 
   test "should raise an error for missing user_id" do
@@ -32,7 +30,7 @@ class SendPersonTest < ActiveSupport::TestCase
     @mock_analytics.expects(:identify).never
 
     assert_raises(ArgumentError, "Missing required parameters: user_id") do
-      SendPerson.call(person)
+      SendPersonToRudderstack.call(person)
     end
   end
 
@@ -42,7 +40,7 @@ class SendPersonTest < ActiveSupport::TestCase
     @mock_analytics.expects(:identify).never
 
     assert_raises(ArgumentError, "Missing required parameters: context") do
-      SendPerson.call(person)
+      SendPersonToRudderstack.call(person)
     end
   end
 
@@ -52,7 +50,7 @@ class SendPersonTest < ActiveSupport::TestCase
     @mock_analytics.expects(:identify).never
 
     assert_raises(ArgumentError, "Missing required parameters: traits") do
-      SendPerson.call(person)
+      SendPersonToRudderstack.call(person)
     end
   end
 
@@ -62,7 +60,7 @@ class SendPersonTest < ActiveSupport::TestCase
     @mock_analytics.expects(:identify).never
 
     assert_raises(ArgumentError, "Missing required parameters: timestamp") do
-      SendPerson.call(person)
+      SendPersonToRudderstack.call(person)
     end
   end
 end

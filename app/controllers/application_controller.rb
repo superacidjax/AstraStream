@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
 
   def authenticate_api_request
     authenticate_or_request_with_http_basic do |username, _password|
-      if username.start_with?("andorra_")
+      if username.start_with?("astra_")
         api_key = ApiKey.find_by(api_secret: username)
         if api_key
           @api_key = api_key
