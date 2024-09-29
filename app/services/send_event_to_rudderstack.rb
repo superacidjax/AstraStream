@@ -1,12 +1,10 @@
-class SendEvent < SendData
+class SendEventToRudderstack < SendToRudderstack
   def self.call(data)
     self.error_for_missing(
       [ "user_id", "event_type", "properties", "context", "timestamp" ],
       data
     )
-    analytics = self.initialize_rudder
-    self.track_event(data, analytics)
-    self.send_to_astragoal("send_event", data)
+    self.track_event(data, self.initialize_rudder)
   end
 
   private

@@ -77,12 +77,4 @@ class BaseProcessorTest < ActiveSupport::TestCase
       ).send(:required_params)
     end
   end
-
-  test "should raise NotImplementedError for process_valid_item" do
-    assert_raises(NotImplementedError) do
-      IncompleteProcessor.new(
-        params: { test_item: @valid_item }, api_key: @api_key
-      ).send(:process_valid_item, @valid_item)
-    end
-  end
 end

@@ -5,7 +5,6 @@ class PersonProcessorTest < ActiveSupport::TestCase
     private
 
     def process_valid_item(valid_person)
-      # Simulate the event processing logic
       valid_person[:processed] = true
     end
   end

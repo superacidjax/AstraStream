@@ -3,7 +3,6 @@ require "test_helper"
 class Api::V1::PeopleControllerTest < ActionDispatch::IntegrationTest
   setup do
     @api_key = api_keys(:one)
-    SendPerson.stubs(:call)
     @valid_person = {
       user_id: "0191faa2-b4d7-78bc-8cdc-6a4dc176ebb4",
       traits: {

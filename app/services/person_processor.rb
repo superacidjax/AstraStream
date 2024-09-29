@@ -18,6 +18,6 @@ class PersonProcessor < BaseProcessor
   end
 
   def process_valid_item(valid_person)
-    SendPersonJob.perform_now(valid_person)
+    super("person", valid_person)
   end
 end

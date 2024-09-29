@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SendEventTest < ActiveSupport::TestCase
+class SendEventToRudderstackTest < ActiveSupport::TestCase
   setup do
     @mock_analytics = mock("analytics")
     Rudder::Analytics.stubs(:new).returns(@mock_analytics)
@@ -12,8 +12,6 @@ class SendEventTest < ActiveSupport::TestCase
       "context" => { "application_id" => "94948" },
       "timestamp" => "2010-10-25T23:48:46+00:00"
     }
-
-    SendToAstragoal.stubs(:send_event).returns(true)
   end
 
   test "should track single event with correct data" do
@@ -25,7 +23,7 @@ class SendEventTest < ActiveSupport::TestCase
       timestamp: @event["timestamp"]
     )
 
-    SendEvent.call(@event)
+    SendEventToRudderstack.call(@event)
   end
 
   test "should raise an error for missing user_id" do
@@ -34,7 +32,7 @@ class SendEventTest < ActiveSupport::TestCase
     @mock_analytics.expects(:track).never
 
     assert_raises(ArgumentError, "Missing required parameters: user_id") do
-      SendEvent.call(event)
+      SendEventToRudderstack.call(event)
     end
   end
 
@@ -44,7 +42,7 @@ class SendEventTest < ActiveSupport::TestCase
     @mock_analytics.expects(:track).never
 
     assert_raises(ArgumentError, "Missing required parameters: event_type") do
-      SendEvent.call(event)
+      SendEventToRudderstack.call(event)
     end
   end
 
@@ -54,7 +52,7 @@ class SendEventTest < ActiveSupport::TestCase
     @mock_analytics.expects(:track).never
 
     assert_raises(ArgumentError, "Missing required parameters: properties") do
-      SendEvent.call(event)
+      SendEventToRudderstack.call(event)
     end
   end
 
@@ -64,7 +62,7 @@ class SendEventTest < ActiveSupport::TestCase
     @mock_analytics.expects(:track).never
 
     assert_raises(ArgumentError, "Missing required parameters: timestamp") do
-      SendEvent.call(event)
+      SendEventToRudderstack.call(event)
     end
   end
 end
