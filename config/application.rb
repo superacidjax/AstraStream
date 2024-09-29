@@ -11,6 +11,13 @@ module AstraStream
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
 
+    # Good Job Dashboard
+
+    config.middleware.use Rack::MethodOverride
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
     # Active Job
     config.active_job.queue_adapter = :good_job
 
