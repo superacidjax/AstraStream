@@ -1,7 +1,7 @@
 {
   "Minitest": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           1,
           1,
@@ -96,7 +96,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           1,
           1,
@@ -123,7 +123,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
         "lines": [
           1,
           1,
@@ -150,7 +150,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
         "lines": [
           0,
           0,
@@ -163,7 +163,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
         "lines": [
           0,
           0,
@@ -176,7 +176,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0,
@@ -202,7 +202,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -215,24 +215,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
         "lines": [
           0,
           0,
@@ -249,7 +232,24 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           0,
           0,
@@ -269,7 +269,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -288,7 +288,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
         "lines": [
           0,
           0,
@@ -302,7 +302,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -312,57 +312,6 @@
           0,
           null,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0,
@@ -379,7 +328,58 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
         "lines": [
           0,
           0,
@@ -402,7 +402,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -435,7 +435,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
           0,
           0,
@@ -457,7 +457,7 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   },
   "Unit Tests": {
     "coverage": {
@@ -474,7 +474,7 @@
           1,
           null,
           1,
-          0,
+          2,
           null,
           null
         ]
@@ -489,217 +489,230 @@
           1,
           null,
           1,
-          0,
+          2,
           null,
-          0,
+          2,
           null,
           null
         ]
       },
       "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
         "lines": [
-          1,
-          1,
-          5,
-          5,
-          5,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          6,
-          6,
-          5,
-          5,
-          5,
-          5,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          5,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          5,
-          5,
-          5,
-          5,
-          null,
-          null,
-          1,
-          5,
-          5,
-          5,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          5,
-          5,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          5,
-          null,
-          4,
-          null,
-          null,
-          4,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          5,
-          5,
-          null,
-          5,
-          4,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          5,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          5,
-          25,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          5,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
           0,
           0,
           0,
           0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
           0,
           0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
+          0
+        ],
+        "branches": {
+        }
       },
       "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
         "lines": [
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0,
@@ -906,67 +919,75 @@
         }
       }
     },
-    "timestamp": 1727625027
+    "timestamp": 1727625162
   },
   "Minitest-2": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          0,
+          4,
+          4,
+          4,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          4,
+          4,
+          4,
+          null,
+          null,
+          0,
+          4,
+          null,
+          4,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
           3,
           3,
           3,
+          null,
+          null,
+          null,
+          0,
+          4,
+          4,
+          null,
+          4,
+          1,
+          null,
+          null,
+          null,
+          null,
           3,
           null,
           null,
-          0,
-          2,
-          2,
-          2,
+          4,
           null,
           null,
           0,
-          null,
-          0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          null,
-          2,
-          null,
           0,
           null,
           null,
           0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
           0,
-          2,
-          2,
-          null,
-          2,
-          0,
-          null,
-          null,
-          null,
-          null,
-          2,
-          null,
-          null,
-          2,
           null,
           null,
           0,
@@ -974,14 +995,6 @@
           null,
           null,
           0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
           null,
           0,
           null,
@@ -990,40 +1003,40 @@
           null,
           null,
           0,
-          2,
-          7,
+          4,
+          17,
           null,
           null,
           0,
-          2,
+          4,
           null,
           null,
-          2,
+          4,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          0,
+          2,
           null,
           null,
           0,
-          0,
-          0,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           0,
-          null,
-          null,
-          null,
-          0,
-          0,
+          2,
           null,
           null,
           0,
@@ -1032,7 +1045,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
         "lines": [
           0,
           0,
@@ -1059,7 +1072,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -1072,12 +1085,12 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -1087,233 +1100,206 @@
           1,
           null,
           1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
           1,
           null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          18,
+          null,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
         "lines": [
           1,
           1,
           2,
+          null,
+          null,
+          null,
+          null,
+          null,
           0,
           null,
           null,
-          1,
           null,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           0,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          1,
-          1,
-          6,
-          26,
-          null,
-          6,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
         "lines": [
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
           0
         ],
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
         "lines": [
           0,
           0,
           null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           0,
@@ -1326,11 +1312,38 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
         "lines": [
           0,
           0,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
           0,
           0,
           0,
@@ -1344,71 +1357,67 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   },
   "Minitest-8": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          3,
-          3,
-          3,
-          3,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           0,
-          3,
-          3,
-          3,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          3,
-          3,
-          3,
-          null,
-          null,
-          0,
-          3,
-          null,
-          3,
-          null,
-          3,
-          null,
-          null,
-          3,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          3,
-          3,
-          null,
-          3,
-          3,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           0,
           null,
+          0,
           null,
-          3,
+          1,
+          1,
+          1,
           null,
           null,
           0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
           0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
           null,
           null,
           0,
@@ -1420,6 +1429,10 @@
           null,
           null,
           0,
+          0,
+          null,
+          null,
+          0,
           null,
           0,
           null,
@@ -1428,49 +1441,22 @@
           null,
           null,
           0,
-          3,
-          14,
+          1,
+          5,
           null,
           null,
           0,
-          3,
+          1,
           null,
           null,
-          3,
+          1,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          2,
-          null,
-          null,
-          0,
-          2,
-          0,
-          null,
-          2,
-          null,
-          null,
-          null,
-          0,
-          2,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           0,
           0,
@@ -1481,9 +1467,9 @@
           null,
           0,
           1,
-          0,
-          null,
           1,
+          null,
+          0,
           null,
           null,
           null,
@@ -1497,7 +1483,34 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -1515,7 +1528,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -1532,7 +1545,28 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
           1,
           1,
@@ -1540,7 +1574,7 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -1551,42 +1585,11 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
         "lines": [
           1,
           1,
-          4,
-          17,
-          null,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
           0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
           0,
           null,
           0,
@@ -1594,16 +1597,104 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
         "lines": [
           1,
           1,
-          3,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
           null,
           null,
           null,
           null,
           0,
+          null,
           null,
           null,
           null,
@@ -1616,31 +1707,53 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
         "lines": [
           1,
           1,
+          null,
           1,
+          0,
+          0,
+          0,
           null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
           0,
           null,
           null,
           null,
+          1,
+          0,
           null,
           null,
+          1,
+          0,
+          0,
           null,
-          null,
+          0,
           null,
           0,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
         "lines": [
           0,
           0,
@@ -1653,120 +1766,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -1775,13 +1775,14 @@
           0,
           null,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           0
@@ -1790,70 +1791,66 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   },
   "Minitest-3": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          2,
-          2,
-          2,
-          2,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           0,
-          2,
-          2,
-          2,
+          0,
+          0,
+          0,
           null,
           null,
           0,
           null,
           0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          null,
-          2,
-          null,
-          2,
-          null,
-          null,
-          2,
           null,
           0,
           0,
           0,
           null,
           null,
+          0,
+          0,
           null,
           0,
-          2,
-          2,
-          null,
-          2,
-          2,
-          null,
-          null,
-          null,
           null,
           0,
           null,
           null,
-          2,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
           null,
           null,
           0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
           0,
           null,
           null,
@@ -1866,6 +1863,10 @@
           null,
           null,
           0,
+          0,
+          null,
+          null,
+          0,
           null,
           0,
           null,
@@ -1874,22 +1875,22 @@
           null,
           null,
           0,
-          2,
-          7,
+          0,
+          0,
           null,
           null,
           0,
-          2,
+          0,
           null,
           null,
-          2,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           0,
           0,
@@ -1908,33 +1909,6 @@
           null,
           0,
           0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          0,
-          null,
-          1,
-          null,
-          null,
-          null,
-          0,
-          1,
           null,
           null,
           0,
@@ -1943,7 +1917,34 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -1961,7 +1962,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -1978,7 +1979,28 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
           1,
           1,
@@ -1990,103 +2012,26 @@
           null,
           null,
           null,
-          1,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
         "lines": [
+          1,
           1,
           1,
           4,
-          19,
-          null,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
           null,
           1,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          3,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
         "lines": [
           0,
           0,
@@ -2099,7 +2044,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
         "lines": [
           0,
           0,
@@ -2112,7 +2057,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0,
@@ -2138,7 +2083,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -2151,24 +2096,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
         "lines": [
           0,
           0,
@@ -2185,7 +2113,50 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
         "lines": [
           0,
           0,
@@ -2212,7 +2183,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -2221,13 +2192,47 @@
           0,
           null,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
           null,
           0,
           0,
           0,
           0,
           0,
+          null,
           0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
           0,
           0,
           0
@@ -2236,71 +2241,67 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   },
   "Minitest-4": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          2,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           0,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          null,
-          2,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          2,
-          2,
-          null,
-          2,
-          2,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           0,
           null,
+          0,
           null,
-          2,
+          1,
+          1,
+          1,
           null,
           null,
           0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
           0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
           null,
           null,
           0,
@@ -2312,6 +2313,10 @@
           null,
           null,
           0,
+          0,
+          null,
+          null,
+          0,
           null,
           0,
           null,
@@ -2320,22 +2325,22 @@
           null,
           null,
           0,
-          2,
-          9,
+          1,
+          5,
           null,
           null,
           0,
-          2,
+          1,
           null,
           null,
-          2,
+          1,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           0,
           0,
@@ -2346,36 +2351,9 @@
           null,
           0,
           1,
+          0,
+          null,
           1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          1,
-          null,
-          0,
           null,
           null,
           null,
@@ -2389,7 +2367,34 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -2407,7 +2412,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -2424,11 +2429,11 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
         "lines": [
           1,
           1,
-          1,
+          0,
           0,
           null,
           null,
@@ -2445,7 +2450,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
           1,
           1,
@@ -2457,66 +2462,66 @@
           null,
           null,
           null,
-          0,
+          1,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
         "lines": [
-          1,
-          1,
-          3,
-          14,
-          null,
-          3,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
           1,
           1,
           0,
           0,
           null,
+          0,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
         "lines": [
           1,
           null,
@@ -2527,18 +2532,18 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -2548,37 +2553,90 @@
           1,
           null,
           1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
           0,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
           0,
           0,
           0,
@@ -2590,7 +2648,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -2607,63 +2665,6 @@
           0,
           0,
           0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
           0,
           null,
           0,
@@ -2674,1438 +2675,106 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   },
   "Minitest-0": {
     "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           2,
           null,
+          null,
+          0,
+          1,
+          1,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0,
           null,
           0,
           null,
           0,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
           0,
+          1,
+          null,
+          1,
+          null,
           0,
+          null,
+          null,
           0,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
+          1,
+          1,
+          null,
+          1,
           0,
           null,
           null,
           null,
           null,
+          1,
           null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      }
-    },
-    "timestamp": 1727625038
-  },
-  "Minitest-7": {
-    "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          6,
-          6,
-          6,
-          6,
+          1,
           null,
           null,
           0,
-          4,
-          4,
+          0,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          1,
           4,
           null,
           null,
           0,
-          null,
-          0,
-          null,
-          4,
-          4,
-          4,
-          null,
-          null,
-          0,
-          4,
-          null,
-          4,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          0,
-          4,
-          4,
-          null,
-          4,
-          2,
-          null,
-          null,
-          null,
-          null,
-          2,
-          null,
-          null,
-          4,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
           1,
           null,
           null,
-          0,
           1,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          4,
-          19,
-          null,
-          null,
-          0,
-          4,
-          null,
-          null,
-          4,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          3,
-          null,
-          null,
-          0,
-          3,
-          1,
-          null,
-          2,
-          null,
-          null,
-          null,
-          0,
-          3,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          0,
-          null,
-          1,
-          null,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          10,
-          null,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      }
-    },
-    "timestamp": 1727625038
-  },
-  "Minitest-6": {
-    "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          null,
-          2,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          2,
-          2,
-          null,
-          2,
-          2,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          2,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          2,
-          9,
-          null,
-          null,
-          0,
-          2,
-          null,
-          null,
-          2,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          9,
-          null,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      }
-    },
-    "timestamp": 1727625038
-  },
-  "Minitest-9": {
-    "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
         "lines": [
           0,
           0,
@@ -4132,34 +2801,34 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          0,
+          1,
           null,
           null,
           0,
-          0,
-          0,
+          1,
+          1,
           null,
           0,
           null,
           null,
           null,
           0,
-          0,
+          1,
           null,
           null,
           0,
-          0,
+          1,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -4172,12 +2841,12 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -4187,396 +2856,2132 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
-          0,
+          1,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
         "lines": [
           1,
           1,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
           1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
           0,
           null,
           null,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      }
-    },
-    "timestamp": 1727625038
-  },
-  "Minitest-1": {
-    "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          3,
-          3,
-          3,
-          3,
-          null,
-          null,
-          0,
-          3,
-          3,
-          3,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          3,
-          3,
-          3,
-          null,
-          null,
-          0,
-          3,
-          null,
-          3,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
           1,
+          1,
+          0,
+          null,
+          null,
           1,
           1,
           null,
           null,
           null,
           0,
-          3,
-          3,
-          null,
-          3,
-          2,
           null,
           null,
           null,
-          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
           1,
-          null,
-          null,
-          3,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
+          1,
           3,
           14,
           null,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1727625529
+  },
+  "Minitest-7": {
+    "coverage": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          6,
+          6,
+          6,
+          6,
+          null,
+          null,
+          0,
+          5,
+          5,
+          5,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          5,
+          5,
+          5,
+          null,
+          null,
+          0,
+          5,
+          null,
+          5,
+          null,
+          4,
+          null,
+          null,
+          4,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          0,
+          5,
+          5,
+          null,
+          5,
+          4,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          5,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          5,
+          22,
+          null,
+          null,
+          0,
+          5,
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
           null,
           0,
           3,
           null,
           null,
+          0,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          0,
+          3,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          19,
+          null,
+          5,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1727625529
+  },
+  "Minitest-6": {
+    "coverage": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          0,
+          2,
+          2,
+          2,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          0,
+          2,
+          null,
+          2,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          0,
+          2,
+          2,
+          null,
+          2,
+          0,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          2,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          2,
+          10,
+          null,
+          null,
+          0,
+          2,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
+          1,
+          1,
+          6,
+          30,
+          null,
+          6,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1727625529
+  },
+  "Minitest-9": {
+    "coverage": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          1,
+          5,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1727625529
+  },
+  "Minitest-1": {
+    "coverage": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          0,
+          4,
+          4,
+          4,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          4,
+          4,
+          4,
+          null,
+          null,
+          0,
+          4,
+          null,
+          4,
+          null,
+          4,
+          null,
+          null,
+          4,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          4,
+          4,
+          null,
+          4,
+          4,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          4,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          4,
+          16,
+          null,
+          null,
+          0,
+          4,
+          null,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          0,
+          2,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
           3,
           null,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
-        "lines": [
-          0,
-          0,
           null,
-          0,
           2,
           null,
           null,
-          0,
-          2,
-          1,
-          null,
-          1,
           null,
           null,
           null,
-          0,
+          null,
+          null,
           2,
           null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          19,
+          null,
+          5,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1727625529
+  },
+  "Minitest-5": {
+    "coverage": {
+      "/Users/brian/development/astra_stream/app/services/base_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          1,
+          4,
+          null,
+          null,
+          0,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/brian/development/astra_stream/app/services/event_processor.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
           null,
           0,
           0,
@@ -4584,7 +4989,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
+      "/Users/brian/development/astra_stream/app/services/person_processor.rb": {
         "lines": [
           0,
           0,
@@ -4611,7 +5016,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
+      "/Users/brian/development/astra_stream/app/models/api_key.rb": {
         "lines": [
           1,
           1,
@@ -4629,7 +5034,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
+      "/Users/brian/development/astra_stream/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -4646,18 +5051,18 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_person_to_rudderstack.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
+          0,
           null,
           null,
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -4667,7 +5072,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_rudderstack.rb": {
         "lines": [
           1,
           1,
@@ -4675,7 +5080,7 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -4686,7 +5091,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_data.rb": {
         "lines": [
           1,
           1,
@@ -4698,58 +5103,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/people_controller.rb": {
         "lines": [
           1,
           1,
@@ -4760,7 +5114,7 @@
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -4770,458 +5124,81 @@
           1,
           null,
           1,
-          3,
-          3,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          0,
           null,
           null,
           null
         ]
       },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/controllers/api/v1/events_controller.rb": {
         "lines": [
           0,
           0,
           0,
           0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0
         ],
         "branches": {
         }
-      }
-    },
-    "timestamp": 1727625038
-  },
-  "Minitest-5": {
-    "coverage": {
-      "/Users/brian/development/streamcamp/app/services/base_processor.rb": {
+      },
+      "/Users/brian/development/astra_stream/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/jobs/send_to_astra_app_job.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          2,
-          null,
-          2,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          0,
-          2,
-          2,
-          null,
-          2,
-          0,
-          null,
-          null,
-          null,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
-          null,
           0,
           0,
-          null,
-          null,
           0,
           0,
-          null,
-          null,
           0,
           0,
-          null,
-          null,
-          0,
-          null,
-          2,
-          null,
-          null,
-          2,
-          null,
-          null,
-          0,
-          2,
-          9,
-          null,
-          null,
-          0,
-          2,
-          null,
-          null,
-          2,
-          null,
-          null,
-          null,
-          null
-        ]
+          0
+        ],
+        "branches": {
+        }
       },
-      "/Users/brian/development/streamcamp/app/services/event_processor.rb": {
+      "/Users/brian/development/astra_stream/app/jobs/send_to_rudderstack_job.rb": {
         "lines": [
           0,
           0,
           null,
           0,
-          1,
-          null,
-          null,
           0,
-          1,
-          1,
-          null,
           0,
-          null,
-          null,
-          null,
           0,
-          1,
-          null,
-          null,
           0,
-          1,
-          null,
-          null
-        ]
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/Users/brian/development/streamcamp/app/services/person_processor.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null,
-          0,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/api_key.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_data.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          7,
-          null,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/people_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_rudderstack_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/jobs/send_to_astra_app_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/controllers/api/v1/events_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_rudderstack.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/brian/development/streamcamp/app/services/send_event_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -5247,7 +5224,34 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_event_to_rudderstack.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/brian/development/astra_stream/app/services/send_person_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -5271,30 +5275,7 @@
         "branches": {
         }
       },
-      "/Users/brian/development/streamcamp/app/services/send_person_to_rudderstack.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/brian/development/streamcamp/app/services/send_to_astra_app.rb": {
+      "/Users/brian/development/astra_stream/app/services/send_to_astra_app.rb": {
         "lines": [
           0,
           0,
@@ -5328,6 +5309,6 @@
         }
       }
     },
-    "timestamp": 1727625038
+    "timestamp": 1727625529
   }
 }

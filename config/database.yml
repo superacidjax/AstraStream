@@ -22,13 +22,13 @@ default: &default
 
 development:
   <<: *default
-  database: streamcamp_development
+  database: astra_stream_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: streamcamp
+  #username: astra_stream
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -56,7 +56,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: streamcamp_test
+  database: astra_stream_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: streamcamp_production
-  username: streamcamp
-  password: <%= ENV["STREAMCAMP_DATABASE_PASSWORD"] %>
+  database: astra_stream_production
+  username: astra_stream
+  password: <%= ENV["ASTRA_STREAM_DATABASE_PASSWORD"] %>
