@@ -7,7 +7,7 @@ class SendEventToAstraApp < SendToAstraApp
 
     event_data = {
       event: {
-        event_type: event["event_type"],
+        name: event["event_type"],
         user_id: event["user_id"],
         properties: event["properties"],
         timestamp: event["timestamp"],

@@ -24,7 +24,7 @@ class SendToAstraAppTest < ActiveSupport::TestCase
       }
     }
 
-    WebMock.disable_net_connect!(allow_localhost: true)  # Disable real HTTP connections
+    WebMock.disable_net_connect!(allow_localhost: false)  # Disable real HTTP connections
   end
 
   test "should send person data to the correct endpoint and call add_basic_auth" do
@@ -46,11 +46,11 @@ class SendToAstraAppTest < ActiveSupport::TestCase
           "User-Agent" => "Ruby"
         }
       )
-      .to_return(status: 200, body: "Success")
+        .to_return(status: 200, body: "Success")
 
-    SendPersonToAstraApp.call(@person_data)
+      SendPersonToAstraApp.call(@person_data)
 
-    assert_requested(:post, "http://localhost:3000/api/v1/people", times: 1)
+      assert_requested(:post, "http://localhost:3000/api/v1/people", times: 1)
   end
 
   test "should send event data to the correct endpoint and call add_basic_auth" do
@@ -58,7 +58,7 @@ class SendToAstraAppTest < ActiveSupport::TestCase
       .with(
         body: {
           event: {
-            event_type: "newSubscription",
+            name: "newSubscription",
             user_id: "12345",
             properties: {
               "subscription_type" => "premium",
@@ -77,10 +77,10 @@ class SendToAstraAppTest < ActiveSupport::TestCase
           "User-Agent" => "Ruby"
         }
       )
-      .to_return(status: 200, body: "Success")
+        .to_return(status: 200, body: "Success")
 
-    SendEventToAstraApp.call(@event_data)
+      SendEventToAstraApp.call(@event_data)
 
-    assert_requested(:post, "http://localhost:3000/api/v1/events", times: 1)
+      assert_requested(:post, "http://localhost:3000/api/v1/events", times: 1)
   end
 end
