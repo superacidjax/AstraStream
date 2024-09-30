@@ -6,6 +6,7 @@ SimpleCov.start "rails" do
 end
 
 ENV["RAILS_ENV"] ||= "test"
+ENV["RUDDERSTACK_SEND"] = "true"
 require_relative "../config/environment"
 require "rails/test_help"
 require "mocha/minitest"

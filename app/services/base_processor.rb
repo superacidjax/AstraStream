@@ -69,7 +69,7 @@ class BaseProcessor
 
   def process_valid_item(item_type, valid_data)
     send_out_jobs = [
-      SendToRudderstackJob.new(item_type, valid_data),
+      # SendToRudderstackJob.new(item_type, valid_data),
       SendToAstraAppJob.new(item_type, valid_data)
     ]
     ActiveJob.perform_all_later(send_out_jobs)
