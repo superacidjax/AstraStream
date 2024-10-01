@@ -14,16 +14,15 @@ gem "ostruct"
 gem "bootsnap", require: false
 
 group :development, :test do
-  gem "pry", git: "https://github.com/superacidjax/pry.git"
   gem "pry-rails"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
 end
 
 group :production do
+  gem "stackprof"
   gem "sentry-ruby"
   gem "sentry-rails"
-  gem "skylight"
 end
 
 group :test do
